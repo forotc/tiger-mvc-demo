@@ -29,7 +29,7 @@
         <dependency>
             <groupId>com.dd.xmc</groupId>
             <artifactId>xmc-spring-boot-starter</artifactId>
-            <version>1.0.5</version>
+            <version>1.1.0</version>
         </dependency>
 
         <dependency>
