@@ -8,6 +8,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 
+
+/**
+ * 重写错误控制器，替代spring boot 默认的白板页面.
+ */
 @Controller
 public class NotFoundMappingController implements ErrorController {
 

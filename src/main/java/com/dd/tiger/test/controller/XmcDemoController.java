@@ -53,7 +53,7 @@ public class XmcDemoController {
         map.put("c", "exception");
 
         int x = map.size();
-        if(x%3 ==0)
+        if(x%3 == 0)
             throw new BizException(7000);
         return map;
     }

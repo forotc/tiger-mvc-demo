@@ -29,7 +29,7 @@
         <dependency>
             <groupId>com.dd.xmc</groupId>
             <artifactId>xmc-spring-boot-starter</artifactId>
-            <version>1.1.0</version>
+            <version>1.2.1</version>
         </dependency>
 
         <dependency>
@@ -41,30 +41,49 @@
             <artifactId>lombok</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>com.lmax</groupId>
+            <artifactId>disruptor</artifactId>
+            <version>3.4.4</version>
+        </dependency>
+
+
     </dependencies>
 
     <repositories>
         <repository>
-            <id>moma-public</id>
-            <name>moma-public</name>
-            <url>http://192.168.1.6:8081/repository/moma-public/</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
+            <id>public</id>
+            <name>aliyun</name>
+            <url>https://maven.aliyun.com/repository/public</url>
+            <layout>default</layout>
+            <releases><enabled>true</enabled></releases>
+            <snapshots><enabled>true</enabled></snapshots>
+        </repository>
+
+        <repository>
+            <id>maven-public</id>
+            <name>maven-public</name>
+            <url>http://192.168.1.6:8081/repository/maven-public/</url>
+            <releases><enabled>true</enabled></releases>
+            <snapshots><enabled>false</enabled></snapshots>
         </repository>
     </repositories>
-
     <pluginRepositories>
+
         <pluginRepository>
-            <id>plugin</id>
-            <name> maven plugin</name>
+            <id>public</id>
+            <name>ali-yun</name>
+            <url>https://maven.aliyun.com/repository/public</url>
+            <releases><enabled>true</enabled></releases>
+            <snapshots><enabled>false</enabled></snapshots>
+        </pluginRepository>
+
+        <pluginRepository>
+            <id>maven-public</id>
+            <name>maven-public</name>
             <url>http://192.168.1.6:8081/repository/maven-public/</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
+            <releases><enabled>true</enabled></releases>
+            <snapshots><enabled>false</enabled></snapshots>
         </pluginRepository>
     </pluginRepositories>
 
