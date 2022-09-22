@@ -15,7 +15,7 @@ import java.util.Map;
 public class XmcDemoController {
 
     /**
-     * 返回对象时自动包装为R
+     * Wrap to R object.
      * @return
      */
     @RequestMapping("g")
@@ -27,7 +27,7 @@ public class XmcDemoController {
     }
 
     /**
-     * 支持直接返回R对象
+     * Return R object directly.
      * @return
      */
     @RequestMapping("r")
@@ -41,7 +41,7 @@ public class XmcDemoController {
     }
 
     /**
-     * 业务异常的处理
+     * business exception
      * @return
      */
     @RequestMapping("be")
@@ -60,7 +60,7 @@ public class XmcDemoController {
 
 
     /**
-     * 其它异常的处理
+     * other exceptions handle
      * @return
      */
     @RequestMapping("e")
@@ -76,10 +76,11 @@ public class XmcDemoController {
 
 
     /**
-     * 用户参数自动解析
+     * Param user auto-injection.
      * @param u
      * @return
      */
+
     @RequestMapping("u")
     public Map<String,String> testResolver(U u){
 

@@ -6,9 +6,9 @@ import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
 /**
- * 用户名长度校验Validator：
- * 实现javax.validation.ConstraintValidator用于定义
- * 具体的校验规则，这里只校验了字符串的长度.
+ * User Validator：
+ * Implement javax.validation.ConstraintValidator interface for define specified valid rules.
+ * This demo shows how to valid length of username.
  */
 public class UsernameLengthValidator implements ConstraintValidator<UsernameLength, String> {
     public static final int MAX_LENGTH = 20;

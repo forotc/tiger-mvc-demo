@@ -25,8 +25,10 @@ public class WebConf implements WebMvcConfigurer {
         LocalValidatorFactoryBean factoryBean = new LocalValidatorFactoryBean();
         MessageInterpolatorFactory interpolatorFactory = new MessageInterpolatorFactory();
         factoryBean.setMessageInterpolator(interpolatorFactory.getObject());
-        // 设置快速失败，Hibernate 验证框架默认验证所有字段设置的所有规则，并返回错误集合。
-        // 快速失败则是只要验证时出现一个错误，立马返回，不执行后面的验证规则
+        // Set to fail fast, the Hibernate validation framework by default validates
+        // all rules set by all fields and returns an error collection.
+        // Fast failure means that as long as an error occurs during verification,
+        // it returns immediately, and the subsequent verification rules are not executed.
         factoryBean.getValidationPropertyMap().put("hibernate.validator.fail_fast", "true");
         // Validator i18n conf
         factoryBean.setValidationMessageSource(messageSource());

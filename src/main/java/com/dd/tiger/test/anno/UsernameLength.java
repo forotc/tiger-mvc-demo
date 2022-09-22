@@ -16,9 +16,6 @@ public @interface UsernameLength {
 
     Class<? extends Payload>[] payload() default {};
 
-    /**
-     * 允许添加多个重复注解.
-     */
     @Target({ElementType.FIELD, ElementType.METHOD})
     @Retention(RetentionPolicy.RUNTIME)
     @Documented
